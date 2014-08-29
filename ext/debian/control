@@ -1,0 +1,17 @@
+Source: mcollective-puppetca
+Homepage: https://github.com/puppetlabs/mcollective-puppetca-agent
+Section: utils
+Priority: extra
+Maintainer: Puppet Labs
+Build-Depends: cdbs, debhelper
+Standards-Version: 3.8.0
+
+Package: mcollective-puppetca-agent
+Architecture: all
+Depends: mcollective-puppetca-common(= ${binary:Version})
+Description: MCollective Agent to manage the Puppet Certificate Authority
+
+Package: mcollective-puppetca-common
+Architecture: all
+Depends: mcollective-common(>= 2.2.1)
+Description: MCollective Agent to manage the Puppet Certificate Authority
