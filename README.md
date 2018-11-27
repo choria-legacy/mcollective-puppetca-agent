@@ -1,12 +1,21 @@
 Puppetca Agent
 ==============
+
+## Deprecation Notice
+
+This repository holds legacy code related to The Marionette Collective project.  That project has been deprecated by Puppet Inc and the code donated to the Choria Project.
+
+Please review the [Choria Project Website](https://choria.io) and specifically the [MCollective Deprecation Notice](https://choria.io/mcollective) for further information and details about the future of the MCollective project.
+
+## Overview
+
 The puppetca agent lets you sign, list, revoke, clean and determine the status of certificates on your
 Puppet Certificate Authorities
 
-##Installation
+## Installation
  * Follow the [basic plugin install guide](http://projects.puppetlabs.com/projects/mcollective-plugins/wiki/InstalingPlugins)
 
-##Configuration
+## Configuration
 
 There is one plugin configuration setting for the puppetca agent
 
@@ -16,9 +25,9 @@ __Example Configuration:__
 
     plugin.puppetca.puppetca = /bin/puppet cert
 
-##Usage
+## Usage
 
-###List
+### List
 
     % mco rpc puppetca list
     Discovering hosts using the mc method for 2 second(s) .... 1
@@ -34,7 +43,7 @@ __Example Configuration:__
 
     Finished processing 1 / 1 hosts in 67.85 ms
 
-###Sign
+### Sign
 
     % mco rpc puppetca sign certname=host3.example.com
     Discovering hosts using the mc method for 2 second(s) .... 1
@@ -49,7 +58,7 @@ __Example Configuration:__
 
     Finished processing 1 / 1 hosts in 48.25 ms
 
-###Revoke
+### Revoke
 
     % mco rpc puppetca revoke certname=host1.example.com
     Discovering hosts using the mc method for 2 second(s) .... 1
@@ -68,7 +77,7 @@ __Example Configuration:__
 
     Finished processing 1 / 1 hosts in 1882.27 ms
 
-###Status
+### Status
 
     % mco rpc puppetca status certname=host2.example.com
     Discovering hosts using the mc method for 2 second(s) .... 1
@@ -83,7 +92,7 @@ __Example Configuration:__
 
     Finished processing 1 / 1 hosts in 56.76 ms
 
-##Data Plugin
+## Data Plugin
 
 The Puppetca agent also supplies a data plugin which uses the Puppetca agent to check the current status of a
 certificate. The data plugin will return 'signed', 'waiting' and 'missing', and can be used during discovery
